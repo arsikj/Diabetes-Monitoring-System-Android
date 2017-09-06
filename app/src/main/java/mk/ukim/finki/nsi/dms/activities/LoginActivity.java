@@ -33,7 +33,7 @@ public class LoginActivity extends AppCompatActivity {
     private AppCompatButton loginButton;
     private LinearLayout loginView;
 
-    private ProgressDialog progressDialog;
+    private ProgressDialog progressDialog = null;
 
     String username;
     String password;
@@ -132,7 +132,7 @@ public class LoginActivity extends AppCompatActivity {
                 PreferencesManager.getInstance(LoginActivity.this).addStringValue(Constants.USERNAME, usernameText.getText().toString());
                 PreferencesManager.getInstance(LoginActivity.this).addStringValue(Constants.PASSWORD, passwordText.getText().toString());
 
-                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
                 startActivity(intent);
             } else {
                 Snackbar snackbar = Snackbar.make(loginView, Constants.NOT_LOGGED_IN, Snackbar.LENGTH_LONG);
@@ -149,6 +149,25 @@ public class LoginActivity extends AppCompatActivity {
                 // By default we just finish the Activity and log them in automatically
                 this.finish();
             }
+        }
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+
+        if(progressDialog != null) {
+            progressDialog.dismiss();
+        }
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+
+        if(progressDialog != null) {
+            progressDialog.dismiss();
+            progressDialog = null;
         }
     }
 }

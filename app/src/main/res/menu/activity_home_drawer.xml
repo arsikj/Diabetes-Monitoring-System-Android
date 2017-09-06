@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_measure"
+            android:icon="@drawable/ic_list"
+            android:title="Measures" />
+        <item
+            android:id="@+id/nav_measure_charts"
+            android:icon="@drawable/ic_chart"
+            android:title="Measures chart" />
+        <item
+            android:id="@+id/nav_bread_units"
+            android:icon="@drawable/ic_list"
+            android:title="Bread units" />
+        <item
+            android:id="@+id/nav_bread_units_charts"
+            android:icon="@drawable/ic_chart"
+            android:title="Bread units chart" />
+        <item
+            android:id="@+id/nav_bmi"
+            android:icon="@drawable/ic_calculator"
+            android:title="BMI" />
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_user"
+            android:title="My Profile" />
+    </group>
+
+</menu>

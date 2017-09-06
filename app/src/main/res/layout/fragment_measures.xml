@@ -1,0 +1,29 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/list_measures" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_margin="15dp"
+        android:id="@+id/add_measure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_add"
+        android:tint="@android:color/white"
+        android:layout_gravity="right|bottom"
+        app:elevation="6dp"
+        app:pressedTranslationZ="12dp"
+        app:backgroundTint="@color/colorAccent"
+        app:rippleColor="@android:color/white"
+        app:fabSize="normal"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        app:borderWidth="0dp"/>
+
+</RelativeLayout>

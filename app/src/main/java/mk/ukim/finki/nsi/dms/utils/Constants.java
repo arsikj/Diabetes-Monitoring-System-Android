@@ -10,7 +10,7 @@ public class Constants {
     public static final String PASSWORD = "password";
     public static final String NAME = "name";
 
-    public static final String LOGIN_LINK = "";
+    public static final String LOGIN_LINK = "http://192.168.100.5:8080/dms/patientLogin";
 
     public static final String AUTHENTICATING = "Authenticating...";
     public static final String NOT_LOGGED_IN = "User not logged in, please try again.";
