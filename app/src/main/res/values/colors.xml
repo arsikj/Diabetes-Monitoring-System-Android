@@ -6,5 +6,8 @@
     <color name="primaryText">#212121</color>
     <color name="secondaryText">#757575</color>
     <color name="dividerColor">#BDBDBD</color>
-    <color name="colorAccent">#FF5252</color>
+    <color name="colorAccent">#448AFF</color>
+    <color name="lightGreen">#4C986D</color>
+    <color name="lightRed">#D46A6A</color>
+    <color name="chartColor">#FF5252</color>
 </resources>

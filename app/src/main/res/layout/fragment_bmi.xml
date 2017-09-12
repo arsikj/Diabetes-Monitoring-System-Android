@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Formula: BMI = x KG / (y M * y M)"
+        android:textColor="@color/primaryText"
+        android:layout_marginBottom="10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Your Height"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/primaryText">
+        </TextView>
+        <EditText
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/height"
+            android:maxLength="6"
+            android:hint="0.00"
+            android:inputType="number|numberDecimal"
+            android:layout_marginLeft="10dp">
+        </EditText>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="cm"
+            android:textStyle="bold"
+            android:textColor="@color/primaryText"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Your Weight"
+            android:id="@+id/txtTotalAmt"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/primaryText">
+        </TextView>
+        <EditText
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/weight"
+            android:maxLength="6"
+            android:hint="0.00"
+            android:inputType="number|numberDecimal"
+            android:layout_marginLeft="10dp">
+        </EditText>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="kg"
+            android:textStyle="bold"
+            android:textColor="@color/primaryText"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/calculate"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Calculate"
+        android:background="@color/colorAccent"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/totalBMI"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:text="YOUR BMI: "
+        android:textColor="@color/primaryText"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BMI Categories"
+        android:textStyle="bold"
+        android:textColor="@color/primaryText"
+        android:layout_marginTop="20dp"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Underweight = &lt; 18.5"
+        android:textColor="@color/primaryText"
+        android:layout_marginTop="10dp"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Normal weight = 18.5–24.9"
+        android:textColor="@color/primaryText"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Overweight = 25–29.9"
+        android:textColor="@color/primaryText"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Obesity = BMI of 30 or greater"
+        android:textColor="@color/primaryText"
+        android:textSize="16sp"/>
+
+</LinearLayout>

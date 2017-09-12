@@ -2,25 +2,20 @@ package mk.ukim.finki.nsi.dms.activities;
 
 import android.os.Bundle;
 import android.support.constraint.ConstraintLayout;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
 import android.view.MenuItem;
 
 import mk.ukim.finki.nsi.dms.R;
 import mk.ukim.finki.nsi.dms.fragments.BMIFragment;
 import mk.ukim.finki.nsi.dms.fragments.BreadUnitsChartsFragment;
 import mk.ukim.finki.nsi.dms.fragments.BreadUnitsFragment;
-import mk.ukim.finki.nsi.dms.fragments.MeasureChartsFragment;
 import mk.ukim.finki.nsi.dms.fragments.MeasureFragment;
 import mk.ukim.finki.nsi.dms.fragments.ProfileFragment;
 
@@ -45,6 +40,8 @@ public class HomeActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        onNavigationItemSelected(navigationView.getMenu().getItem(0));
+        navigationView.setCheckedItem(R.id.nav_measure);
 
         contentFrame = (ConstraintLayout) findViewById(R.id.content_frame);
     }
@@ -86,9 +83,6 @@ public class HomeActivity extends AppCompatActivity
         if (id == R.id.nav_measure) {
             fragment = new MeasureFragment();
             title = "Measures";
-        } else if (id == R.id.nav_measure_charts) {
-            fragment = new MeasureChartsFragment();
-            title = "Measures chart";
         } else if (id == R.id.nav_bread_units) {
             fragment = new BreadUnitsFragment();
             title = "Bread units";

@@ -6,10 +6,14 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 
 import mk.ukim.finki.nsi.dms.R;
 import mk.ukim.finki.nsi.dms.model.Measure;
@@ -40,10 +44,14 @@ public class MeasuresListAdapter extends RecyclerView.Adapter<MeasuresListAdapte
         Measure measure = measures.get(position);
 
         holder.level.setText(measure.getLevel() + "mg/dl");
-        holder.dateAdded.setText(measure.getDateAdded().toString());
+        DateFormat formatter = new SimpleDateFormat("dd.MM.yyyy");
+        String formattedDate = formatter.format(measure.getDateAdded());
+        holder.dateAdded.setText(formattedDate);
 
-        //// TODO: 06.9.2017 change colors for different measure levels
-        ((RelativeLayout) holder.itemView).setBackgroundColor(ContextCompat.getColor(context, R.color.colorAccent));
+        if(measure.getLevel() >= 80 && measure.getLevel() <= 130)
+            ((LinearLayout) holder.itemView).setBackgroundColor(ContextCompat.getColor(context, R.color.lightGreen));
+        else
+            ((LinearLayout) holder.itemView).setBackgroundColor(ContextCompat.getColor(context, R.color.lightRed));
     }
 
     @Override
